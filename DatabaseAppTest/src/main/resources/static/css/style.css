@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Poppins;
+    url(/fonts/Poppins-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Poppins;
+    url(/fonts/Poppins-ExtraBold.ttf);
+    font-weight: bold;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../images/pozadiStranky.jpg");
+    background-size: cover; /* Přizpůsobí obrázek velikosti stránky */
+    background-repeat: no-repeat; /* Zabrání opakování obrázku */
+    background-position: center; /* Umístí obrázek do středu stránky */
+}
+footer {
+    text-align: center;
+}
+footer a {
+    font-size: 0.8em;
+    text-decoration: none;
+}
+.active-sort {
+    background-color: greenyellow;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+table {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.tooltip-inner {
+    font-size: 1.2em; /* Velikost písma v tooltipech */
+}
+.popis {
+    text-align: justify;
+}
+.databaze {
+    color: #75c246;
+}
+.popis-div {
+    box-shadow: 4px 4px 5px rgb(188 249 255);
+}
+.tabulka-vypis {
+    box-shadow: 0px 0px 5px 4px rgb(255, 255, 255);
+}
