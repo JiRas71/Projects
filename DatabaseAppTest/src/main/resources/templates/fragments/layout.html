@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Šablona</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Header with responsive navigation -->
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" th:href="@{index}">
+                <img src="/images/logoSpring.png" alt="logo Spring Boot" height="35" class="me-1">
+                <span class="text-light fs-3 me-3">&</span>
+                <img src="/images/database.png" alt="database" width="35" height="35" class="me-2">
+                <span class="databaze">DATABÁZE</span>
+            </a>
+
+            <!-- Responsive Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Aplikace je postavena na moderních webových technologiích jako Java s využitím Spring Boot pro backend, Thymeleaf pro šablonování stránek a Bootstrap pro stylování. Data jsou uložena v relační databázi, což zajišťuje bezpečné a spolehlivé ukládání informací.')">Technologie</a>
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Možnost snadného přidání nových uživatelů do databáze s potřebnými údaji, jako je jméno, příjmení, e-mail a telefon.')">Ukládání</a>
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Funkce umožňuje rychlou a snadnou editaci již existujících uživatelských záznamů.')">Úprava záznamů</a>
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Po kliknutí na ⬆️ nebo ⬇️ setřídíte záznamy podle pořadí, abecedně, nebo podle data vytvoření.')">Třídění</a>
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Databáze je optimalizována pro práci s velkými objemy dat díky stránkování, které umožňuje pohodlný přístup k různým částem záznamů.')">Stránkování</a>
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Pokročilý vyhledávací nástroj umožňuje rychlé nalezení konkrétního uživatele nebo skupiny uživatelů na základě zadaných kritérií.')">Vyhledávání</a>
+                    <a class="nav-link text-light" style="cursor: pointer" onclick="showHelpText('Uživatelé mohou bezpečně odstranit vybrané záznamy s potvrzením akce pro zajištění bezpečnosti dat.')">Mazání záznamů</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Footer -->
+<footer th:fragment="footer" class="bg-dark p-1 mt-auto text-center">
+    <a href="https://jiras-web.cz" class="text-light" target="_blank">Vytvořil &copy;JiRas 2024</a>
+</footer>
+
+<!-- Help Text Script -->
+<script th:fragment="helpText">
+    function showHelpText(message) {
+        alert(message);
+    }
+</script>
+
+</body>
+</html>

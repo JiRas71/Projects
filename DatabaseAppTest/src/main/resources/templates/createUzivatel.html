@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/layout.html :: head(pageTitle='Nový záznam')}"></head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<header th:replace="~{fragments/layout.html :: header}"></header>
+
+<div class="container d-flex justify-content-center text-center">
+    <form th:action="@{/createUzivatel}" method="post" th:object="${uzivatelDTO}">
+        <h4 class="mt-4 mb-3 text-light">Vytvoření nového uživatele</h4>
+
+        <!-- Skryté pole pro ID uživatele -->
+        <input type="hidden" th:field="${uzivatelDTO.id}" />
+
+        <div class="tabulka">
+            <table class="bg-info-subtle border border-5">
+                <thead>
+                <tr>
+                    <th><label for="jmeno" class="form-label mt-1">Zadejte jméno: </label></th>
+                    <td><input th:field="${uzivatelDTO.jmeno}" id="jmeno" name="jmeno" type="text" class="form-control-sm ms-2"></td>
+                    <td><small class="text-danger ms-2" th:errors="*{jmeno}"></small></td>
+                </tr>
+                <tr>
+                    <th><label for="prijmeni" class="form-label mt-1">Zadejte příjmení: </label></th>
+                    <td><input th:field="${uzivatelDTO.prijmeni}" id="prijmeni" name="prijmeni" type="text" class="form-control-sm ms-2"></td>
+                    <td><small class="text-danger ms-2" th:errors="*{prijmeni}"></small></td>
+                </tr>
+                <tr>
+                    <th><label for="email" class="form-label mt-1">Zadejte e-mail: </label></th>
+                    <td><input th:field="${uzivatelDTO.email}" id="email" name="email" type="email" class="form-control-sm ms-2"></td>
+                    <td><small class="text-danger ms-2" th:errors="*{email}"></small></td>
+                </tr>
+                <tr>
+                    <th><label for="telefon" class="form-label mt-1">Zadejte telefon: </label></th>
+                    <td><input th:field="${uzivatelDTO.telefon}" id="telefon" name="telefon" type="tel" class="form-control-sm ms-2"></td>
+                    <td><small class="text-danger ms-2" th:errors="*{telefon}"></small></td>
+                </tr>
+                </thead>
+            </table>
+            <div>
+                <input type="submit" value="Uložit" class="btn btn-sm btn-primary my-3">
+                <button type="reset" class="btn btn-sm btn-secondary mx-2">Reset</button>
+                <a th:href="@{/index}" class="btn btn-sm btn-success">Zpět na výpis</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+
+<script th:replace="~{fragments/layout.html :: helpText}"></script>
+</body>
+</html>
