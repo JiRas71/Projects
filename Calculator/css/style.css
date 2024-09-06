@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('../fonts/digital-7.ttf') format('truetype');
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px; /* Nastavení mezery mezi buňkami */
+}
+
+table td {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px; /* Zaoblení rohů */
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: 'Digital-7', sans-serif;
+    font-size: 1.5em;
+}
+
+.zobrazeni {
+    width: 90%;
+    font-weight: bold;
+    font-family: 'Digital-7', sans-serif;
+    font-size: 1.5em;
+}
+
+.funkce {
+    background-color: #ecf0a0;
+    font-weight: normal;
+}
+
+.funkce:hover {
+    background-color: #c7cb87 !important;
+}
+
+.rovnaSe:hover {
+    background-color: #358dff !important;
+}
+
+table td:hover {
+    background-color: #a0bec5 !important;
+}
+
+table td.clicked,
+table td.resetuj.clicked,
+table td.funkce.clicked,
+table td.rovnaSe.clicked {
+    background-color: #ffffff !important;
+}
+
+#reproduktor {
+    cursor: pointer;
+    height: 2em;
+}
+
+#reproduktor:hover {
+    background-color: #b3b9bf;
+}
+
+.rovnaSe,
+.resetuj {
+    color: lightblue;
+    height: 40px;
+    background-color: #0071ff;
+}
+
+.rovnaSe:hover,
+.resetuj:hover {
+    background-color: #0057cc !important;
+}
+
+#displej {
+    overflow-x: auto; /* Umožní horizontální posouvání obsahu */
+    white-space: nowrap; /* Zajistí, že text nebude zalomen */
+}
+
+#nadpis {
+    white-space: pre-wrap; /* Zajistí zalomení textu na nové řádky */
+    word-wrap: break-word; /* Zalomí dlouhá slova na nové řádky */
+    max-width: 100%; /* Omezí šířku nadpisu, aby se text zalomil */
+}
+
+#datumCas,
+#zadanText,
+.textPata {
+    font-size: small;
+}

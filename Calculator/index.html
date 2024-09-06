@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <title>Můj-calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex justify-content-center mt-4 bg-dark">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-5 col-md-11 d-flex justify-content-center">
+            <div class="border border-dark bg-dark-subtle rounded-4 mx-auto">
+                <p id="datumCas" class="text-secondary mt-2 mb-0 pb-0 text-center"></p>
+                <div class="d-block">
+                    <div class="d-flex pb-0 mb-0 align-items-center">
+                        <div>
+                            <p id="zadanText" class="ms-3 mb-0"></p>
+                        </div>
+                        <pre id="reproduktor"
+                             class="btn btn-sm border border-dark rounded-3 my-2 mx-auto me-3 fs-5">🔈</pre>
+                    </div>
+                    <div class="text-center mb-2 mt-0">
+                        <input id="displej" value="0" type="text"
+                               class="zobrazeni form-control-lg text-end bg-light shadow">
+                    </div>
+                </div>
+                <table id="tabulka" class="fs-4">
+                    <tr class="text-center">
+                        <td class="border bg-info-subtle border border-dark shadow">1</td>
+                        <td class="border bg-info-subtle border border-dark shadow">2</td>
+                        <td class="border bg-info-subtle border border-dark shadow">3</td>
+                        <td class="funkce border border border-dark shadow">+</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="border bg-info-subtle border border-dark shadow">4</td>
+                        <td class="border bg-info-subtle border border-dark shadow">5</td>
+                        <td class="border bg-info-subtle border border-dark shadow">6</td>
+                        <td class="funkce border border border-dark shadow">-</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="border bg-info-subtle border border-dark shadow">7</td>
+                        <td class="border bg-info-subtle border border-dark shadow">8</td>
+                        <td class="border bg-info-subtle border border-dark shadow">9</td>
+                        <td class="funkce border border border-dark shadow">𝗑</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="border bg-info-subtle border border-dark shadow">0</td>
+                        <td class="funkce border border border-dark shadow">%</td>
+                        <td class="funkce border border border-dark shadow">,</td>
+                        <td class="funkce border  border border-dark shadow">/</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td colspan="2" class="resetuj border border-dark shadow">C</td>
+                        <td colspan="2" class="rovnaSe border border-dark shadow">=</td>
+                    </tr>
+                </table>
+                <p class="textPata text-center pb-0 mb-0 text-secondary">© JiRas 2024</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/Calculator.js"></script>
+<script src="js/obsluha.js"></script>
+</body>
+</html>
