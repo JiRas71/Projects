@@ -7,7 +7,7 @@ header("Content-Type: application/json");
 $host = 'db.dw184.webglobe.com';
 $dbname = 'jiras_web_cz';
 $username = 'jiras_web_cz';
-$password = 'JiRas8522';
+$password = '*********'; // heslo na vyžádání - jiri.raszka@icloud.com, +420 725 832 519
 
 try {
     // Připojení k databázi
