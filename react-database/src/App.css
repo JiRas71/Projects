@@ -1,0 +1,31 @@
+body {
+    background-image: url('/public/images/pozadiStranky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+footer a {
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+/* Styl tlačítka s Ⓧ */
+.custom-close-btn {
+    background: transparent;  /* Žádné pozadí */
+    border: none;  /* Žádné okraje */
+    font-size: 15px;  /* Velikost textu */
+    color: red;  /* Barva znaku */
+    cursor: pointer;  /* Změna kurzoru na pointer */
+    padding: 0;
+}
+
+.custom-close-btn:hover {
+    color: darkred;  /* Změna barvy na tmavší červenou při hoveru */
+    transform: scale(1.1);  /* Mírné zvětšení při hoveru */
+}
+
+.nowrap {
+    white-space: nowrap;
+}
